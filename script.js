@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         source: polylineSource,
         style: new ol.style.Style({
             stroke: new ol.style.Stroke({
-                color: 'green',
-                width: 5
+                color: 'black',
+                width: 3
                 
             })
         })
