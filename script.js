@@ -63,3 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Terjadi kesalahan:", error));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([100.59278479614993,-0.45644766640162937]),
+            zoom: 17
+        })
+    });
+});
