@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Tabel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP OPEN LAYERS</title>
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
 </head>
-<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
-<link rel="stylesheet" href="style.css">
 <body>
     <center><h1>Open Layer Map</h1></center>
     <h2>Farhan Riziq</h2>
     <h2>1214024</h2>
     <h2>3A-D4TI</h2>
+
+    <div id='map'></div>
+
+    <input type="hidden" id="idmarker" name="idmarker" value="">
+
+    <div id="popupinfo" class="ol-popup">
+        <b id="popupinfo-title"></b>
+        <div id="popupinfo-content"></div>
+        <div id="popupinfo-delete">
+            <input type="hidden" id="idmarker" name="idmarker" value="">
+            <button id="hapusbutton" type="button">Hapus</button><button id="hitungcogbutton" type="button">Hitung
+                COG</button><br>
+        </div>
+
+    </div>
+
+    <div id="popup" class="ol-popup">
+        <b id="popup-title">Input Center of Gravity</b><a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+        <div id="popup-input">
+            Nama : <input type="text" id="name" name="name" required><br>
+            Volume : <input type="text" id="volume" name="volume" required><br>
+            <input type="hidden" id="long" name="long" value="">
+            <input type="hidden" id="lat" name="lat" value="">
+            <button id="insertmarkerbutton" type="button">Input</button><br>
+        </div>
+    </div>
 </body>
 <body>
-    <div id="map" class="map"></div>
     <div id="info-table">
     <div class="point-table">
     <h1>Data Poin</h1>
     <table id="pointTable" border="1">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Nama</th>
                 <th>Koordinat</th>
                 <th>Type</th>
@@ -33,6 +63,7 @@
     <table id="polygonTable" border="1">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Nama</th>
                 <th>Koordinat</th>
                 <th>Type</th>
@@ -47,6 +78,7 @@
     <table id="polylineTable" border="1">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Nama</th>
                 <th>Koordinat</th>
                 <th>Type</th>
@@ -55,7 +87,6 @@
         <tbody></tbody>
     </table>
 </div>
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="js/croot.js"></script>
 </body>
 </html>
